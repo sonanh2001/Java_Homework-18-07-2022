@@ -1,6 +1,7 @@
 package matrix;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.TreeMap;
 
 import static util.ScannerUtil.SCANNER;
@@ -55,7 +56,7 @@ public class Matrix {
         }
     }
 
-    public void printSortColumn() {
+    public void printSortColumnBySum() {
         TreeMap<Integer, ArrayList<Integer>> columnMap = new TreeMap<>();
         for (int rowIndex = 0; rowIndex < numOfRow; rowIndex++) {
             ArrayList<Integer> column = new ArrayList<>();
@@ -83,7 +84,34 @@ public class Matrix {
         }
 
     }
+    public void printSortColumnAscendingOrder() {
+        ArrayList<ArrayList<Integer>> columnsOfMatrix = new ArrayList<>();
+        for (int rowIndex = 0; rowIndex < numOfRow; rowIndex++) {
+            ArrayList<Integer> column = new ArrayList<>();
+            for (int colIndex = 0; colIndex < numOfCol; colIndex++) {
+                column.add(matrix[colIndex][rowIndex]);
+            }
+            Collections.sort(column);
+            columnsOfMatrix.add(column);
+        }
 
+        int[][] tempMatrix = new int[numOfRow][numOfCol];
+        int colCount = 0;
+        for (ArrayList<Integer> column : columnsOfMatrix) {
+            for (int rowIndex = 0; rowIndex < numOfRow; rowIndex++) {
+                tempMatrix[rowIndex][colCount] = column.get(rowIndex);
+            }
+            colCount++;
+        }
+
+        for (int rowIndex = 0; rowIndex < numOfRow; rowIndex++) {
+            for (int colIndex = 0; colIndex < numOfCol; colIndex++) {
+                System.out.print(tempMatrix[rowIndex][colIndex] + " ");
+            }
+            System.out.println();
+        }
+
+    }
     private boolean checkPrime(int num) {
         if (num < 2) {
             return false;

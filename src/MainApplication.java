@@ -18,6 +18,7 @@ public class MainApplication {
         matrix.enterMatrix();
         matrix.findMaxNumberOfMatrix();
         matrix.printPrimeValue();
-        matrix.printSortColumn();
+        matrix.printSortColumnBySum();
+        matrix.printSortColumnAscendingOrder();
     }
 }

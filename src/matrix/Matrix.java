@@ -76,12 +76,7 @@ public class Matrix {
             colCount++;
         }
 
-        for (int rowIndex = 0; rowIndex < numOfRow; rowIndex++) {
-            for (int colIndex = 0; colIndex < numOfCol; colIndex++) {
-                System.out.print(tempMatrix[rowIndex][colIndex] + " ");
-            }
-            System.out.println();
-        }
+        printMatrix(tempMatrix);
 
     }
 
@@ -105,15 +100,17 @@ public class Matrix {
             colCount++;
         }
 
+        printMatrix(matrix);
+
+    }
+    private void printMatrix(int[][] matrix) {
         for (int rowIndex = 0; rowIndex < numOfRow; rowIndex++) {
             for (int colIndex = 0; colIndex < numOfCol; colIndex++) {
-                System.out.print(tempMatrix[rowIndex][colIndex] + " ");
+                System.out.print(matrix[rowIndex][colIndex] + " ");
             }
             System.out.println();
         }
-
     }
-
     private boolean checkPrime(int num) {
         if (num < 2) {
             return false;

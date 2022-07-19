@@ -84,6 +84,7 @@ public class Matrix {
         }
 
     }
+
     public void printSortColumnAscendingOrder() {
         ArrayList<ArrayList<Integer>> columnsOfMatrix = new ArrayList<>();
         for (int rowIndex = 0; rowIndex < numOfRow; rowIndex++) {
@@ -112,6 +113,7 @@ public class Matrix {
         }
 
     }
+
     private boolean checkPrime(int num) {
         if (num < 2) {
             return false;

@@ -7,6 +7,7 @@ public class PrimeFactorization {
   private static final int FIRST_ODD_PRIME = 3;
   private static final int REMAINDER_OF_DIVISIBILITY = 0;
   private static final int MIN_VALUE_OF_PRIME_FACTORIZATION = 1;
+
   public void solve(int num) {
     LinkedList<Integer> result = new LinkedList<>();
     while (num % EVEN_PRIME == REMAINDER_OF_DIVISIBILITY) {

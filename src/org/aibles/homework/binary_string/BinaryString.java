@@ -17,7 +17,7 @@ public class BinaryString {
   }
 
   public void solve(int index) {
-    //iterate over the values considered in the recursion
+    // iterate over the values considered in the recursion
     for (int i = 0; i <= 1; i++) {
       if (index == length) {
         printBinaryString();

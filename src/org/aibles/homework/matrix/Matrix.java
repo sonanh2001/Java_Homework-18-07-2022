@@ -7,13 +7,14 @@ import java.util.Collections;
 import java.util.TreeMap;
 
 public class Matrix {
-  private final int numOfRow;
-  private final int numOfCol;
-  private final int[][] matrix;
   private static final int EVEN_PRIME = 2;
   private static final int REMAINDER_OF_DIVISIBILITY = 0;
   private static final int FIRST_ROW_INDEX = 0;
   private static final int FIRST_COLUMN_INDEX = 0;
+  private final int numOfRow;
+  private final int numOfCol;
+  private final int[][] matrix;
+
   public Matrix(int numOfRow, int numOfCol) {
     this.numOfRow = numOfRow;
     this.numOfCol = numOfCol;
@@ -30,7 +31,8 @@ public class Matrix {
   }
 
   public void findMaxNumberOfMatrix() {
-    int rowIndexOfResult = FIRST_ROW_INDEX, colIndexOfResult = FIRST_COLUMN_INDEX,
+    int rowIndexOfResult = FIRST_ROW_INDEX,
+        colIndexOfResult = FIRST_COLUMN_INDEX,
         result = matrix[FIRST_ROW_INDEX][FIRST_COLUMN_INDEX];
     for (int rowIndex = 0; rowIndex < numOfRow; rowIndex++) {
       for (int colIndex = 0; colIndex < numOfCol; colIndex++) {

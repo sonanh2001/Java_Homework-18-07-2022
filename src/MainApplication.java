@@ -1,7 +1,8 @@
-import binary_string.BinaryString;
-import matrix.Matrix;
-import prime.FiveDigitPrime;
-import prime.PrimeFactorization;
+import org.aibles.homework.binary_string.BinaryString;
+import org.aibles.homework.matrix.Matrix;
+import org.aibles.homework.prime.FiveDigitPrime;
+import org.aibles.homework.prime.PrimeFactorization;
+
 
 public class MainApplication {
     public static void main(String[] args) {
